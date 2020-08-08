@@ -1,4 +1,5 @@
 window.onload = function () {
+    var sca = '01';
  	var R = Raphael("south", 320, 400);
 	var attr = {
 		fill: "#fff",
