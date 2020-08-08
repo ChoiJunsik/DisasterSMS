@@ -2,7 +2,7 @@ window.onload = function () {
     var sca = '01';
  	var R = Raphael("south", 320, 400);
 	var attr = {
-		fill: "#fff",
+		fill: "#ccece6",
 		stroke: "#666",
 		"stroke-width": 0.5,
 		"stroke-linejoin": "round"
@@ -39,9 +39,9 @@ window.onload = function () {
 
 	aus.gyeongbuk = R.path("M198,153 188,160 186,171 177,169 165,172 166,177 158,177 158,187 152,185 151,185 156,191 157,200 153,205 161,207 166,216 161,218 157,226 156,236 160,241 168,241 173,253 180,256 178,252 183,250 182,246 189,241 184,238 186,232 193,232 200,230 203,233 207,241 200,249 194,248 191,254 193,259 201,260 207,264 215,258 220,259 229,249 238,255 240,251 246,255 250,240 252,232 248,235 241,235 244,227 242,213 246,176 245,157 241,144 233,154 230,156 224,152 211,155 208,151 206,155.5 200,151 198,153z M273,145 276,142 278,141 283,140 280,148 276,147 275,145 273,145z M306,150 310,150 309,152z M311,152 315,150 314,152z").attr(attr);
 
-	//aus.ulleung = R.path("M273,145 276,144 283,140 280,148 276,147 275,145 273,145 z").attr(attr);
+	// aus.ulleung = R.path("M273,145 276,144 283,140 280,148 276,147 275,145 273,145 z").attr(attr);
 
-	//aus.dokdo = R.path("M312,150 316,150 315,152z M317,152 321,150 320,152z").attr(attr);
+	// aus.dokdo = R.path("M312,150 316,150 315,152z M317,152 321,150 320,152z").attr(attr);
 
 	aus.daegu = R.path("M184,258 180,253 185,251 184,247 191.5,241 185.5,237 187.5,234 193,234 200,232 201.5,235 205.5,241 199.5,247 193,247 189.5,253 191,259 186,256 184,258 z").attr(attr);
 
@@ -59,7 +59,7 @@ window.onload = function () {
 		(function (st, state) {
 			st[0].style.cursor = "pointer";
 			st[0].onmouseover = function () { // onover
-				current && aus[current].animate({fill: "#fff", stroke: "#666"}, 500) && (document.getElementById(current).style.display = "");
+				current && aus[current].animate({fill: "#ccece6", stroke: "#666"}, 500) && (document.getElementById(current).style.display = "");
 				st.animate({fill: st.color, stroke: "#ccc"}, 500);
 				//st.toFront();
 				R.safari();
@@ -68,7 +68,7 @@ window.onload = function () {
  			}
 
 			st[0].onmouseout = function () {
-				st.animate({fill: "#fff", stroke: "#666"}, 500);
+				st.animate({fill: "#ccece6", stroke: "#666"}, 500);
 				//st.toFront();
 				R.safari();
 			};
