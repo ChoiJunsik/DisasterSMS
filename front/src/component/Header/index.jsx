@@ -7,7 +7,18 @@ import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from "@material-ui/core/InputAdornment";
+import styled from "styled-components";
 
+const WTextField = styled(TextField)`
+  & label.Mui-focused {
+    color:#90cc00;
+  }
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: #90cc00;
+    }
+  }
+`;
 const Header = (props) => {
     return (
         <>
@@ -21,7 +32,7 @@ const Header = (props) => {
                     </Grid>
                     <Grid item md={8} xs={12}>
                         <form action="">
-                            <TextField id="outlined-basic" placeholder="ex) 양천구청" label="지역명 검색하기" variant="outlined" fullWidth
+                            <WTextField id="outlined-basic" placeholder="ex) 양천구청" label="지역명 검색하기" variant="outlined" fullWidth
                                 InputProps={{
                                     endAdornment: (
                                     <InputAdornment position="end">
@@ -32,7 +43,7 @@ const Header = (props) => {
                                     )
                                 }}
                             >
-                            </TextField>
+                            </WTextField>
                         </form>
                     </Grid>
                 </Grid>

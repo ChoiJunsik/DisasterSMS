@@ -8,11 +8,12 @@
 #logo_head{
     font-family: 'GmarketSansBold', sans-serif;
     font-size: 3rem;
+    color:#90cc00;
 }
 #logo_description{
     font-family: 'GmarketSansMedium', sans-serif;
 }
 #header{
-    padding-top:15px;
+    padding-top:40px;
     margin-bottom: 20px;
 }

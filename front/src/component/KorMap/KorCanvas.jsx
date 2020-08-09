@@ -3,9 +3,11 @@ import * as React from 'react';
 
 const KorCanvas = (props) => {
     return (
-        <div style={{width:"100%", height:"400px"}}>
+        <div id="map">
             <div id="canvas">
-                <div id="south"></div>
+                <h1 id="map_logo">재난 위험 현황</h1>
+                <div id="south">
+                </div>
                 <div id="seoul">
                     <h2>서울특별시</h2>
                 </div>
