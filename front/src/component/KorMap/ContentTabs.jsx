@@ -7,6 +7,9 @@ const TabWrapper = styled(Tab)`
     font-family: 'GmarketSansMedium', sans-serif;
     font-size: 1.1rem;
 `;
+const TabsWrapper = styled(Tabs)`
+    margin-bottom:20px;
+`;
 export default function ContentTab({ setTab }) {
     const [value, setValue] = React.useState(0);
     const handleChange = (event, newValue) => {
@@ -15,7 +18,7 @@ export default function ContentTab({ setTab }) {
     };
 
     return (
-        <Tabs
+        <TabsWrapper
             value={value}
             onChange={handleChange}
             // indicatorColor="primary"
@@ -30,6 +33,6 @@ export default function ContentTab({ setTab }) {
             <TabWrapper label="위험 현황" />
             <TabWrapper label="재난 그래프" />
             <TabWrapper label="경로 추적" />
-        </Tabs>
+        </TabsWrapper>
     );
 }

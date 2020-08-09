@@ -19,7 +19,15 @@ const WTextField = styled(TextField)`
     }
   }
 `;
-const Header = (props) => {
+const Header = ({setLocation}) => {
+    const [inputVal,setInputVal] = React.useState('');
+    const handleInput = (e)=>{
+        setInputVal(e.target.value);
+    }
+    const handleChange = (e)=>{
+        e.preventDefault();
+        setLocation(inputVal);
+    }
     return (
         <>
             <Container id="header" maxWidth="md">
@@ -31,17 +39,19 @@ const Header = (props) => {
                         </div>
                     </Grid>
                     <Grid item md={8} xs={12}>
-                        <form action="">
-                            <WTextField id="outlined-basic" placeholder="ex) 양천구청" label="지역명 검색하기" variant="outlined" fullWidth
-                                InputProps={{
-                                    endAdornment: (
-                                    <InputAdornment position="end">
-                                        <IconButton type="submit" aria-label="search">
-                                            <SearchIcon />
-                                        </IconButton>
-                                    </InputAdornment>
-                                    )
-                                }}
+                        <form action="" onSubmit={handleChange}>
+                            <WTextField value={inputVal} onChange={handleInput} 
+                                        id="outlined-basic" placeholder="ex) 양천구청" label="지역명 검색하기" 
+                                        variant="outlined" fullWidth autoFocus
+                                        InputProps={{
+                                            endAdornment: (
+                                            <InputAdornment position="end">
+                                                <IconButton type="submit" aria-label="search">
+                                                    <SearchIcon />
+                                                </IconButton>
+                                            </InputAdornment>
+                                            )
+                                        }}
                             >
                             </WTextField>
                         </form>
