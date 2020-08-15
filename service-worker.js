@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DisasterSMS/precache-manifest.f2c85a886001ef33efc6b0b7fdd0fde9.js"
+  "/DisasterSMS/precache-manifest.ccf32235350919c07ed1b4fb5b4f57af.js"
 );
 
 self.addEventListener('message', (event) => {

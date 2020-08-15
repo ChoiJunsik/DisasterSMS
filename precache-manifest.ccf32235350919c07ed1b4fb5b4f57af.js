@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dae1585e07f1c2aea91587dd6c26440a",
+    "revision": "a09ce3acf115e50480da5c749640f689",
     "url": "/DisasterSMS/index.html"
   },
   {
-    "revision": "657cf455a41de2beac78",
+    "revision": "b1dcad2cf005e4c0d540",
     "url": "/DisasterSMS/static/css/main.8cdb18a5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DisasterSMS/static/js/2.d53bb47a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "657cf455a41de2beac78",
-    "url": "/DisasterSMS/static/js/main.42bdb750.chunk.js"
+    "revision": "b1dcad2cf005e4c0d540",
+    "url": "/DisasterSMS/static/js/main.a1bdb379.chunk.js"
   },
   {
     "revision": "4e8c352fe7fa807ab7dc",
