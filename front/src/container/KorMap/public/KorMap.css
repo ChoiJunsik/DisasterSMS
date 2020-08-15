@@ -1,0 +1,23 @@
+/* 컨텐츠 */
+@media screen and (max-width:480px){
+    #container {
+      flex-direction : column;
+    }
+    #content_detail{
+      order: 2;
+      align-self: center;
+      justify-self: center;
+    }
+    #content_map{
+        order: 1;
+        align-self: center;
+        justify-self: center;
+        margin-left: 10px;
+    }
+  }
+#content_detail{
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 20px;
+    box-sizing: border-box;
+    height:500px;
+}

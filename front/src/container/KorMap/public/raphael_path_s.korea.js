@@ -1,5 +1,6 @@
 export default function initKorMap (Raphael,setLocation) {
-    let sca = '01';
+    // let sca = '01';
+    let sca = '';
  	let R = Raphael("south", 320, 400);
 	let attr = {
 		fill: "#ccece6",
@@ -36,17 +37,18 @@ export default function initKorMap (Raphael,setLocation) {
     let current = null;
 
     for (let location in doms) {
-        doms[location].color = Raphael.getColor();
+        // doms[location].color = Raphael.getColor();
 		// (function (st, location) {
 			doms[location][0].style.cursor = "pointer";
             doms[location][0].onmouseover = function () { // onover
-				current && doms[current].animate({fill: "#ccece6", stroke: "#666"}, 500) && (document.getElementById(current).style.display = "");
-				doms[location].animate({fill: doms[location].color, stroke: "#ccc"}, 500);
+				// current && doms[current].animate({fill: "#ccece6", stroke: "#666"}, 500) && (document.getElementById(current).style.display = "");
+				// doms[location].animate({fill: doms[location].color, stroke: "#ccc"}, 500);
 				document.getElementById(location).style.display = "block";
 				current = location;
  			}
 			doms[location][0].onmouseout = function () {
-				doms[location].animate({fill: "#ccece6", stroke: "#666"}, 500);
+                // doms[location].animate({fill: "#ccece6", stroke: "#666"}, 500);
+                document.getElementById(location).style.display = "none";
 			};
 
 			if ((sca === '01' && location === "seoul") || (sca === '09' && location === "gangwon")

@@ -6,25 +6,25 @@ const dotenv = require('dotenv');
 const path = require('path');
 const indexRouter = require('./routes');
 const cors = require('cors')();
-const redis = require('redis');
 dotenv.config();
 const app = express();
 app.set('port', process.env.PORT || 8000);
 
 
-const redis = require('redis');
-const client = redis.createClient({
-        port: process.env.REDIS_PORT,
-        host: process.env.REDIS_HOST,
-        password: process.env.REDIS_PASSWORD});
-app.set('redis',client);
+// const redis = require('redis');
+// const client = redis.createClient({
+//         port: process.env.REDIS_PORT,
+//         host: process.env.REDIS_HOST,
+//         password: process.env.REDIS_PASSWORD});
+// app.set('redis',client);
 app.use(cors);
 app.use(morgan('dev')); // 요청/응답 log , 배포환경 : combined
 app.use('/', express.static(path.join(__dirname, 'public'))); //실제경로명
 //body-parser : form-ajax 요청 해석 후 req.body 객체로 만들어준다, 멀티파트(이미지/동영상은 불가)
-app.use(express.json());//json
-app.use(express.urlencoded({ extended: false }));//form : false(노드 querystring 이용)
-
+app.use(express.json({
+    limit : "50mb"
+}));//json
+app.use(express.urlencoded({     limit:"50mb",extended: false }));//form : false(노드 querystring 이용)
 app.use(cookieParser(process.env.COOKIE_SECRET)); // 요청에 동봉된 쿠키를 해석해 req.cookies 객체로 만듦
 
 app.use(session({

@@ -1,11 +1,11 @@
 // @flow 
 import * as React from 'react';
-
+import './public/map.css';
 const KorCanvas = (props) => {
     return (
         <div id="map">
             <div id="canvas">
-                <h1 id="map_logo">재난 위험 현황</h1>
+                <h1 id="map_logo">오늘 하루 재난문자 현황</h1>
                 <div id="south">
                 </div>
                 <div id="seoul">

@@ -2,21 +2,21 @@
 import * as React from 'react';
 import axios from 'axios';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-
+import './public/card.css';
 const locationTable = {
     'seoul': '서울',
     'gygg': '경기',
     'incheon': '인천',
     'gangwon': '강원',
-    'chungnam': '충청남도',
-    'chungbuk': '충청북도',
+    'chungnam': '충청',
+    'chungbuk': '충청',
     'daejeon': '대전',
-    'jeonbuk': '전라북도',
-    'jeonnam': '전라남도',
+    'jeonbuk': '전라',
+    'jeonnam': '전라',
     'gwangju': '광주',
     'jeju': '제주',
-    'gyeongbuk': '경상북도',
-    'gyeongnam': '경상남도',
+    'gyeongbuk': '경상',
+    'gyeongnam': '경상',
     'daegu': '대구',
     'ulsan': '울산',
     'busan': '부산',

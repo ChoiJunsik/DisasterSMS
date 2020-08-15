@@ -1,6 +1,6 @@
 // @flow 
 import * as React from 'react';
-import './header.css'
+import './public/header.css'
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';

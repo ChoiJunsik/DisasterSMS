@@ -1,5 +1,5 @@
 import React from 'react';
-import KorMap from './component/KorMap';
+import KorMap from './container/KorMap';
 import './App.css';
 function App() {
     return (

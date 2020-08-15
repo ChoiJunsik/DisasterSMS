@@ -1,0 +1,51 @@
+#card{
+    display: inline-block;
+    width: 80%;
+    font-family: 'GmarketSansLight', sans-serif;
+    margin-left: 30px;
+    border: 2px solid #eeeeee;
+}
+#card-content{
+    padding-left: 25px;
+}
+#card-detail{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#date{
+    padding-top: 15px;
+    margin-bottom: 10px;
+    color:#707070;
+}
+#card-header{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color:#eeeeee;
+    cursor:pointer;
+}
+
+#tag{
+    width:40px;
+    height: 23px;
+    background-color: #ff5252;
+    border: 1px solid #ff5252;
+    color : white;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 5px;
+}
+#header-name{
+    padding-left: 10px;
+    font-weight: bold;
+}
+#no-search{
+    font-family: 'GmarketSansBold',sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+#more{
+    margin-left: auto;
+    padding-right: 10px;
+}

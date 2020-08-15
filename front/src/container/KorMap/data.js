@@ -1,0 +1,18 @@
+export const locationTable = {
+    'seoul': '서울',
+    'gygg': '경기',
+    'incheon': '인천',
+    'gangwon': '강원',
+    'chungnam': '충청남도',
+    'chungbuk': '충청북도',
+    'daejeon': '대전',
+    'jeonbuk': '전라북도',
+    'jeonnam': '전라남도',
+    'gwangju': '광주',
+    'jeju': '제주',
+    'gyeongbuk': '경상북도',
+    'gyeongnam': '경상남도',
+    'daegu': '대구',
+    'ulsan': '울산',
+    'busan': '부산',
+};
