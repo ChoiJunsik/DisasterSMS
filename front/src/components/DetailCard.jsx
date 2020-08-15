@@ -32,7 +32,7 @@ const DetailCard = ({ bbs_ordr, location, content }) => {
     React.useEffect(() => {
         if (toggle) {
             async function fetchData() {
-                const ret = await axios.get('http://localhost:8000/location/detail', {
+                const ret = await axios.get('https://bdt-api.herokuapp.com/location/detail', {
                     params: {
                         bbs_ordr: bbs_ordr
                     }

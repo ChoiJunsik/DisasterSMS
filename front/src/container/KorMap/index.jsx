@@ -29,7 +29,7 @@ const KorMap = (props) => {
 
     React.useEffect(() => {
         async function fetchData() {
-            const ret = await axios.get('http://localhost:8000/location', {
+            const ret = await axios.get('https://bdt-api.herokuapp.com/location', {
                 params: {
                     location: location
                 }
@@ -44,7 +44,7 @@ const KorMap = (props) => {
         if (mapDoms !== null) {
             for (let query in locationTable) {
                 (async () => {
-                    const ret = await axios.get('http://localhost:8000/location/cur', {
+                    const ret = await axios.get('https://bdt-api.herokuapp.com/location/cur', {
                         params: {
                             location: query
                         }
