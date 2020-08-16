@@ -64,24 +64,32 @@ router.get('/location/detail', async (req, res, next) => {
     const response = await axios.post("https://www.safekorea.go.kr/idsiSFK/bbs/user/selectBbsView.do",detailSelect);
     return res.json(response.data.bbsMap.cn);
 });
+//(사용안함) 각 지역 한달간 재난문자 발생건수 => 스케줄러,DB화
+// router.get('/location/cur', async (req, res, next) => {
+//     const syncDateObj = syncDate();
+//     const location = (locationTable[req.query.location] !== undefined ? locationTable[req.query.location] : req.query.location);
+//     const postObj = {
+//         "bbs_searchInfo":
+//         {
+//             "pageIndex":
+//                 "1", "pageUnit": "10", "pageSize": 10, "firstIndex": "1", "lastIndex": "1", "recordCountPerPage": "10",
+//                 "bbs_no": "63", "bbs_ordr": "", "use": "", "opCode": "", "search_type_v": "2", "search_val_v": location,
+//                 "search_key_n": "", "search_notice": "", "search_use": "", "search_permits": "", "search_disaster_a": "",
+//                 "search_disaster_b": "", "search_amendment": "", "search_start": syncDateObj.search_date_limit, "search_end": syncDateObj.search_end, 
+//                 "search_date_limit": syncDateObj.search_date_limit
+//         }
+//     };
+
+//     const rawData = await axios.post("https://www.safekorea.go.kr/idsiSFK/bbs/user/selectBbsList.do",postObj);
+//     return res.json(rawData.data.rtnResult.totCnt);
+// });
 
 router.get('/location/cur', async (req, res, next) => {
-    const syncDateObj = syncDate();
-    const location = (locationTable[req.query.location] !== undefined ? locationTable[req.query.location] : req.query.location);
-    const postObj = {
-        "bbs_searchInfo":
-        {
-            "pageIndex":
-                "1", "pageUnit": "10", "pageSize": 10, "firstIndex": "1", "lastIndex": "1", "recordCountPerPage": "10",
-                "bbs_no": "63", "bbs_ordr": "", "use": "", "opCode": "", "search_type_v": "2", "search_val_v": location,
-                "search_key_n": "", "search_notice": "", "search_use": "", "search_permits": "", "search_disaster_a": "",
-                "search_disaster_b": "", "search_amendment": "", "search_start": syncDateObj.search_date_limit, "search_end": syncDateObj.search_end, 
-                "search_date_limit": syncDateObj.search_date_limit
-        }
-    };
-
-    const rawData = await axios.post("https://www.safekorea.go.kr/idsiSFK/bbs/user/selectBbsList.do",postObj);
-    return res.json(rawData.data.rtnResult.totCnt);
+    const client = req.app.get('redis');
+    client.get('curMap', function (err, value) {
+        if (err) return res.status(404).json({err:-1});
+        return res.status(200).json(JSON.parse(value));
+    });
 });
 
 module.exports = router;

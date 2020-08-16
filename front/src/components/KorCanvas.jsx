@@ -5,7 +5,7 @@ const KorCanvas = (props) => {
     return (
         <div id="map">
             <div id="canvas">
-                <h1 id="map_logo">오늘 하루 재난문자 현황</h1>
+                <h1 id="map_logo">한달간 재난문자 현황</h1>
                 <div id="south">
                 </div>
                 <div id="seoul">

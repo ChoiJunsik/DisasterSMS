@@ -2,6 +2,8 @@
 
 <hr>
 
+**To Do List**
+
 1. 게시판 API 추출 후 이용 => 2020-07-08~08-08 게시판 데이터 JSON DB화
 
 2. Front/Backend : 지도-검색 연동 실시간 재난 현황 update
@@ -19,3 +21,7 @@
 5. 키워드 분석
     * 하루치 재난문자 키워드 분석
     * 축적된 재난문자 키워드 분석
+
+**문제**
+
+1. heroku 배포시 timezone 문제 , heroku config:add TZ="Asia/Seoul" --app bdt-api

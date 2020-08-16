@@ -42,22 +42,18 @@ const KorMap = (props) => {
 
     React.useEffect(() => {
         if (mapDoms !== null) {
-            for (let query in locationTable) {
-                (async () => {
-                    const ret = await axios.get('https://bdt-api.herokuapp.com/location/cur', {
-                        params: {
-                            location: query
-                        }
-                    });
+            (async () => {
+                const ret = await axios.get('https://bdt-api.herokuapp.com/location');
+                for (let query in ret.data) {
                     let color = '#ffcdd2';
-                    if(ret.data > 500) color = '#c62828';
-                    else if (ret.data > 400) color = '#e53935';
-                    else if(ret.data > 300) color = '#ef5350';
-                    else if(ret.data > 200) color = '#ef9a9a';
-    
+                    if (ret.data[query] > 500) color = '#c62828';
+                    else if (ret.data[query] > 400) color = '#e53935';
+                    else if (ret.data[query] > 300) color = '#ef5350';
+                    else if (ret.data[query] > 200) color = '#ef9a9a';
+
                     (mapDoms[query])[0].setAttribute("fill", color);
-                })();
-            }
+                }
+            })();
         }
     }, [mapDoms]);
 
