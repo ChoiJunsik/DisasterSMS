@@ -3,6 +3,8 @@ import * as React from 'react';
 import axios from 'axios';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import './public/card.css';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 const locationTable = {
     'seoul': '서울',
     'gygg': '경기',
@@ -52,6 +54,7 @@ const DetailCard = ({ bbs_ordr, location, content }) => {
             </div>
             <div id="card-content">
                 <div id="date">{content}</div>
+                {(toggle === true && detail === null) ? <div id="load_wrapper"><CircularProgress id="load" /></div> : null }
                 {(toggle === true && detail !== null) ? <div id="card-detail">{detail}</div> : null}
             </div>
         </div>
