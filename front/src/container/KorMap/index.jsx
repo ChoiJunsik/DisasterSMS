@@ -29,6 +29,7 @@ const KorMap = (props) => {
 
     React.useEffect(() => {
         async function fetchData() {
+            setInfo("");
             const ret = await axios.get('https://bdt-api.herokuapp.com/location', {
                 params: {
                     location: location

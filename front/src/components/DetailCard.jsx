@@ -39,7 +39,6 @@ const DetailCard = ({ bbs_ordr, location, content }) => {
                         bbs_ordr: bbs_ordr
                     }
                 });
-                console.log(ret.data);
                 setDetail(ret.data);
             }
             fetchData();
