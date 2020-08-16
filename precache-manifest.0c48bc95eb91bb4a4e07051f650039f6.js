@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e6121f0798aa8b7006092c1fa852ed0c",
+    "revision": "8dc6ca9ec5241f89b0229646fb89912b",
     "url": "/DisasterSMS/index.html"
   },
   {
