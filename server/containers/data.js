@@ -1,4 +1,4 @@
-export const locationTable = {
+module.exports = locationTable = {
     'seoul': '서울특별시',
     'gygg': '경기도',
     'incheon': '인천광역시',

@@ -1,12 +1,13 @@
 const schedule = require('node-schedule');
 const redis = require('redis');
 const syncDate = require('./SyncDate');
+const locationTable = require('./data');
 const axios = require('axios');
 
 const locationTable = {
-    'seoul': '서울',
-    'gygg': '경기',
-    'incheon': '인천',
+    'seoul': '서울특별시',
+    'gygg': '경기도',
+    'incheon': '인천광역시',
     'gangwon': '강원',
     'chungnam': '충청남도',
     'chungbuk': '충청북도',

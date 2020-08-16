@@ -35,7 +35,6 @@ const KorMap = (props) => {
                 }
             });
             setInfo(ret.data);
-            console.log(ret.data)
         }
         fetchData();
     }, [location]);
@@ -43,7 +42,7 @@ const KorMap = (props) => {
     React.useEffect(() => {
         if (mapDoms !== null) {
             (async () => {
-                const ret = await axios.get('https://bdt-api.herokuapp.com/location');
+                const ret = await axios.get('https://bdt-api.herokuapp.com/location/cur');
                 for (let query in ret.data) {
                     let color = '#ffcdd2';
                     if (ret.data[query] > 500) color = '#c62828';
