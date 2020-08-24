@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const syncDate = require('../containers/SyncDate');
-const locationTable = require('../containers/data');
+const {locationTable} = require('../containers/data');
 const router = express.Router();
 
 //해당 지역 20개의 데이터 가져오기
