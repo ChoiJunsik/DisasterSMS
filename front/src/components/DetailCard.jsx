@@ -22,6 +22,7 @@ const locationTable = {
     'daegu': '대구',
     'ulsan': '울산',
     'busan': '부산',
+    'sejong':'세종'
 };
 const DetailCard = ({ bbs_ordr, location, content }) => {
     const [toggle, setToggle] = React.useState(false);
