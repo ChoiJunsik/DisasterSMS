@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/DisasterSMS/static/css/main.cfe30e04.chunk.css",
-    "main.js": "/DisasterSMS/static/js/main.6b2ffb08.chunk.js",
-    "main.js.map": "/DisasterSMS/static/js/main.6b2ffb08.chunk.js.map",
+    "main.js": "/DisasterSMS/static/js/main.c81f5c68.chunk.js",
+    "main.js.map": "/DisasterSMS/static/js/main.c81f5c68.chunk.js.map",
     "runtime-main.js": "/DisasterSMS/static/js/runtime-main.601fe063.js",
     "runtime-main.js.map": "/DisasterSMS/static/js/runtime-main.601fe063.js.map",
     "static/js/2.77bd380b.chunk.js": "/DisasterSMS/static/js/2.77bd380b.chunk.js",
     "static/js/2.77bd380b.chunk.js.map": "/DisasterSMS/static/js/2.77bd380b.chunk.js.map",
     "index.html": "/DisasterSMS/index.html",
-    "precache-manifest.efc3b2974f486436a9dc806594f5438d.js": "/DisasterSMS/precache-manifest.efc3b2974f486436a9dc806594f5438d.js",
+    "precache-manifest.c4fc4a9d1047540e0a3fe00777ad286d.js": "/DisasterSMS/precache-manifest.c4fc4a9d1047540e0a3fe00777ad286d.js",
     "service-worker.js": "/DisasterSMS/service-worker.js",
     "static/css/main.cfe30e04.chunk.css.map": "/DisasterSMS/static/css/main.cfe30e04.chunk.css.map",
     "static/js/2.77bd380b.chunk.js.LICENSE.txt": "/DisasterSMS/static/js/2.77bd380b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.601fe063.js",
     "static/js/2.77bd380b.chunk.js",
     "static/css/main.cfe30e04.chunk.css",
-    "static/js/main.6b2ffb08.chunk.js"
+    "static/js/main.c81f5c68.chunk.js"
   ]
 }
