@@ -5,7 +5,7 @@ const session = require('express-session');
 const dotenv = require('dotenv');
 const path = require('path');
 const indexRouter = require('./routes');
-const job = require('./containers/Scheduler');
+const {montlyDataJob,updaeGraphJob} = require('./containers/Scheduler');
 const cors = require('cors')();
 dotenv.config();
 const app = express();

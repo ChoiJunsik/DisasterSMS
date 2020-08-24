@@ -3,7 +3,7 @@ const redis = require('redis');
 const {montlyDataProxy,todayDataProxy} = require('./proxy');
 
 ///////////////////////////////////////////////////////////////////////////////////JOB
-const job = schedule.scheduleJob({ hour: 0, minute: 0 }, async () => {
+const montlyDataJob = schedule.scheduleJob({ hour: 0, minute: 0 }, async () => {
 
     const client = redis.createClient({
         port: process.env.REDIS_PORT,
@@ -13,7 +13,7 @@ const job = schedule.scheduleJob({ hour: 0, minute: 0 }, async () => {
     await montlyDataProxy(client);
     client.quit();
 });
-const job = schedule.scheduleJob({ hour: 23, minute: 59 }, async () => {
+const updaeGraphJob = schedule.scheduleJob({ hour: 23, minute: 59 }, async () => {
 
     const client = redis.createClient({
         port: process.env.REDIS_PORT,
@@ -24,7 +24,7 @@ const job = schedule.scheduleJob({ hour: 23, minute: 59 }, async () => {
     client.quit();
 });
 
-module.exports = job;
+module.exports = {montlyDataJob,updaeGraphJob};
 
 
 // client.flushdb(function (err, succeeded) {
