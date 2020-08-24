@@ -41,7 +41,7 @@ const Header = ({setLocation}) => {
                     <Grid item md={8} xs={12}>
                         <form action="" onSubmit={handleChange}>
                             <WTextField value={inputVal} onChange={handleInput} 
-                                        id="outlined-basic" placeholder="ex) 양천구청" label="지역명 검색하기" 
+                                        id="outlined-basic" placeholder="ex) 양천구청, 한강" label="키워드 검색하기" 
                                         variant="outlined" fullWidth autoFocus
                                         InputProps={{
                                             endAdornment: (

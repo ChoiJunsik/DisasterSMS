@@ -45,11 +45,13 @@ const KorMap = (props) => {
             (async () => {
                 const ret = await axios.get('https://bdt-api.herokuapp.com/location/cur');
                 for (let query in ret.data) {
-                    let color = '#ffcdd2';
+
+                    let color = '#ccece6';
                     if (ret.data[query] > 500) color = '#c62828';
                     else if (ret.data[query] > 400) color = '#e53935';
                     else if (ret.data[query] > 300) color = '#ef5350';
                     else if (ret.data[query] > 200) color = '#ef9a9a';
+                    else if(ret.data[query] > 100) color = '#ffcdd2';
 
                     (mapDoms[query])[0].setAttribute("fill", color);
                 }

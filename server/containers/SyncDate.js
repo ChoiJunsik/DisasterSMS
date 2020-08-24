@@ -3,8 +3,8 @@ const syncDate = ()=>{
     let date = new Date();
     date = new Date(date.setMonth(date.getMonth() - 1));
     const year = String(date.getFullYear());
-    let last_month = String(date.getMonth() + 1);
-    let cur_month = String(date.getMonth() + 2);
+    let last_month = String(date.getMonth() + 1  > 12 ? date.getMonth() - 11 : date.getMonth() + 1);
+    let cur_month = String(date.getMonth() + 2 > 12 ? date.getMonth() - 10 : date.getMonth() + 2);
     let day = String(date.getDate());
     day = (day.length == 1) ? "0" + day : day;
     last_month = (last_month.length == 1) ? "0" + last_month : last_month;
