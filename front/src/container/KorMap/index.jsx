@@ -14,11 +14,30 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import axios from 'axios';
 
-
+async function fetchStatusData(setInfo,location) {
+    setInfo("");
+    const ret = await axios.get('https://bdt-api.herokuapp.com/location', {
+        params: {
+            location: location
+        }
+    });
+    setInfo(ret.data);
+}
+async function fetchWeeklyData(setWeeklyData,location) {
+    setWeeklyData([]);
+    const ret = await axios.get('https://bdt-api.herokuapp.com/location/weekly', {
+        params: {
+            location: location
+        }
+    });
+    console.log(ret.data)
+    setWeeklyData((ret.data)[location]);
+}
 const KorMap = (props) => {
     const [location, setLocation] = React.useState('seoul');
     const [tab, setTab] = React.useState('위험 현황');
     const [info, setInfo] = React.useState("");
+    const [weeklyData, setWeeklyData] = React.useState(null);
     const [mapDoms, setDoms] = React.useState(null);
     React.useEffect(() => {
         setDoms(initKorMap(Raphael, setLocation));
@@ -28,17 +47,12 @@ const KorMap = (props) => {
     }, []);
 
     React.useEffect(() => {
-        async function fetchData() {
-            setInfo("");
-            const ret = await axios.get('https://bdt-api.herokuapp.com/location', {
-                params: {
-                    location: location
-                }
-            });
-            setInfo(ret.data);
+        if(tab=="위험 현황"){
+            fetchStatusData(setInfo,location);
         }
-        fetchData();
-    }, [location]);
+        else if(tab=="재난 그래프")
+            fetchWeeklyData(setWeeklyData,location);
+    }, [location,tab]);
 
     React.useEffect(() => {
         if (mapDoms !== null) {
@@ -66,7 +80,7 @@ const KorMap = (props) => {
                 <Grid container spacing={3} alignItems='center' alignContent='center'>
                     <Grid id="content_detail" item md={7} xs={12}>
                         <ContentTab id="content_tab" setTab={setTab} />
-                        <ContentSection tab={tab} info={info} location={location} />
+                        <ContentSection tab={tab} info={info} location={location} weeklyData={weeklyData} />
                     </Grid>
                     <Grid id="content_map" item md={5} xs={12}>
                         <KorCanvas />

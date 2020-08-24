@@ -55,6 +55,14 @@ router.get('/location/cur', async (req, res, next) => {
         return res.status(200).json(JSON.parse(value));
     });
 });
+//weekly 정보
+router.get('/location/weekly', async (req, res, next) => {
+    const client = req.app.get('redis');
+    client.get('weeklyGraph', function (err, value) {
+        if (err) return res.status(404).json({err:-1});
+        return res.status(200).json(JSON.parse(value));
+    });
+});
 
 module.exports = router;
 

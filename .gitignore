@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 */main.js
+/Crawling/main.js
 */.env
