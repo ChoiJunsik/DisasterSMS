@@ -1,4 +1,23 @@
-module.exports = locationTable = {
+const redisData = {
+    'seoul': 0,
+    'gygg': 0,
+    'incheon': 0,
+    'gangwon': 0,
+    'chungnam': 0,
+    'chungbuk': 0,
+    'daejeon': 0,
+    'jeonbuk': 0,
+    'jeonnam': 0,
+    'gwangju': 0,
+    'jeju': 0,
+    'gyeongbuk': 0,
+    'gyeongnam': 0,
+    'daegu': 0,
+    'ulsan': 0,
+    'busan': 0,
+    'sejong':0,
+};
+const locationTable = {
     'seoul': '서울특별시',
     'gygg': '경기도',
     'incheon': '인천광역시',
@@ -17,3 +36,5 @@ module.exports = locationTable = {
     'ulsan': '울산',
     'busan': '부산',
 };
+
+module.exports = {redisData,locationTable};
