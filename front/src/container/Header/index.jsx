@@ -8,6 +8,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from "@material-ui/core/InputAdornment";
 import styled from "styled-components";
+import Button from '@material-ui/core/Button';
 
 const WTextField = styled(TextField)`
   & label.Mui-focused {
@@ -31,6 +32,9 @@ const Header = ({setLocation}) => {
     return (
         <>
             <Container id="header" maxWidth="md">
+                <div id="top_keyword">
+                    오늘의 키워드 : 확진자 발생
+                </div>
                 <Grid container spacing={3} alignItems='center'>
                     <Grid item md={4} xs={12}>
                         <div id="logo">

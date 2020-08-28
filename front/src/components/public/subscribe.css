@@ -1,0 +1,22 @@
+#subscribe{
+    margin-top: 25px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sub_form{
+    width: 80%;
+}
+#sub_button{
+    margin-top: 20px;
+    background-color: #0091ea;
+}
+#sub_email{
+    padding: 14px 14px;
+}
+#sub_description{
+    font-family: 'GmarketSansMedium', sans-serif;
+    margin-bottom: 40px;
+}

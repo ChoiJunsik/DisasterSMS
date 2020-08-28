@@ -32,7 +32,7 @@ export default function ContentTab({ setTab }) {
         >
             <TabWrapper label="위험 현황" />
             <TabWrapper label="재난 그래프" />
-            <TabWrapper label="키워드 분석" />
+            <TabWrapper label="구독 서비스" />
         </TabsWrapper>
     );
 }

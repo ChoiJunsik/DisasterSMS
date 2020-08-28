@@ -2,14 +2,16 @@
 import * as React from 'react';
 import DetailCard from './DetailCard';
 import WeeklyGraph from './WeeklyGraph';
+import Subscribe from "./Subscribe";
 
 import './public/contentSection.css';
+
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const ContentSection = ({ tab, info, location, weeklyData }) => {
+const ContentSection = ({ email,tab, info, location, weeklyData,tags,handleEmailChange,handleTagChange,handleSubscribe }) => {
     return (
         <div id="content_section">
-            {(tab === '위험 현황' || tab === '키워드 분석') && info === "" ? <div id="load_wrapper"><CircularProgress id="load" /></div> : null}
+            {(tab === '위험 현황') && info === "" ? <div id="load_wrapper"><CircularProgress id="load" /></div> : null}
             {tab === '위험 현황' ? (
                 info.length > 0 ?
                     info.map((val) => {
@@ -27,8 +29,8 @@ const ContentSection = ({ tab, info, location, weeklyData }) => {
             ) : null
             }
             {
-                tab === '키워드 분석' ? (
-                    <div>키워드 분석</div>
+                tab === '구독 서비스' ? (
+                    <Subscribe email={email} tags={tags} handleTagChange={handleTagChange} handleEmailChange={handleEmailChange} handleSubscribe={handleSubscribe}></Subscribe>
                 ) : null
             }
         </div >

@@ -16,7 +16,7 @@ const WeeklyGraph = ({ location,weeklyData }) => {
                     <XAxis dataKey="date" hide={true} />
                     <YAxis />
                     <Tooltip />
-                    <Legend payload={[{ value: `${locationTable[location]} 재난문자 발생건수`, type: 'line',color:'c62828'}]}/>
+                    <Legend payload={[{ value: ` 일주일간 ${locationTable[location]} 재난문자 발생건수`, type: 'line',color:'c62828'}]}/>
                     <Line type="monotone" dataKey="재난문자 발생건수" stroke="#c62828" />
                 </LineChart>
             </ResponsiveContainer>
