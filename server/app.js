@@ -6,11 +6,13 @@ const dotenv = require('dotenv');
 const path = require('path');
 const indexRouter = require('./routes');
 const {montlyDataJob,updaeGraphJob} = require('./containers/Scheduler');
-const cors = require('cors')();
-dotenv.config();
-const app = express();
-app.set('port', process.env.PORT || 8000);
 const redis = require('redis');
+const cors = require('cors')();
+const app = express();
+
+dotenv.config();
+
+app.set('port', process.env.PORT || 8000);
 
 const client = redis.createClient({
     port: process.env.REDIS_PORT,

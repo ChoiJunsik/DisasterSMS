@@ -2,28 +2,30 @@
 
 <hr>
 
-**To Do List**
+**완료 상황**
 
-1. ~~게시판 API 추출 후 이용 => 2020-07-08~08-08 게시판 데이터 JSON DB화~~
+1. 게시판 API 추출 후 이용 => 2020-07-08~08-08 게시판 데이터 JSON DB화
 
-2. ~~Front/Backend : 지도-검색 연동 실시간 재난 현황 update~~
-    ![위험현황](https://user-images.githubusercontent.com/26922008/89745367-5157c680-daee-11ea-8747-ea3a31243fdf.png)<br>
-    ![키워드_검색](https://user-images.githubusercontent.com/26922008/89745370-53218a00-daee-11ea-9253-62e02b9bf492.PNG)<br>
+2. Front/Backend : 지도-검색 연동 실시간 재난 현황 update
+    ![위험현황](https://user-images.githubusercontent.com/26922008/89745367-5157c680-daee-11ea-8747-ea3a31243fdf.png)
+    ![키워드_검색](https://user-images.githubusercontent.com/26922008/89745370-53218a00-daee-11ea-9253-62e02b9bf492.PNG)
 
-3. ~~지도 : 재난문자 현황에 따른 색 변화~~
+3. 지도 : 재난문자 현황에 따른 색 변화
     ![image](https://user-images.githubusercontent.com/26922008/90306761-32e93500-df0b-11ea-9b21-2127c44c27f2.png)
 
-4. ~~그래프~~
-    ~~* 한달간 총 재난문자 발생현황~~
-    ~~* 지역 재난 문자 발생현황~~
+4. 그래프
+    * 한달간 총 재난문자 발생현황
+    * 지역 재난 문자 발생현황
     ![재난 그래프](https://user-images.githubusercontent.com/26922008/91023067-04690980-e631-11ea-9ba2-c583b40688a5.png)
 
-5. 키워드 분석
-    * 하루치 재난문자 키워드 분석
-    * 축적된 재난문자 키워드 분석
+5. 2020.08.28 구독 서비스 / 오늘의 키워드
+    * 구독자 데이터가 저장된 mysql과 연결
+    ![구독_오늘의키워드](https://user-images.githubusercontent.com/26922008/91542568-0563a900-e959-11ea-8da8-e2b3626b62cc.PNG)
 
-**문제**
+**To Do List**
 
 1. heroku 배포시 timezone 문제 , heroku config:add TZ="Asia/Seoul" --app bdt-api
 2. 프록시 서버를 통해 데이터를 받아와서 지도가 상당히 늦게 뜸 => redis에 미리 캐싱해두고 불러오기
-3. 정상적으로 당일의 재난문자 카운트 값을 변경하는 배치 프로그램 확인해야함
+3. 정상적으로 당일의 재난문자 카운트 값을 변경하는 배치 프로그램 확인해야함 => 확인완료
+4. mysql에 저장한 유저에게 실시간 재난문자 현황 전송 배치 프로그램 작성해야함
+5. 오늘의 키워드 자연어처리 모델 구축

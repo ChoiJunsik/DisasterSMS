@@ -2,8 +2,8 @@ const express = require('express');
 const axios = require('axios');
 const syncDate = require('../containers/SyncDate');
 const {locationTable} = require('../containers/data');
+const {createUser} = require('../models');
 const router = express.Router();
-
 //해당 지역 20개의 데이터 가져오기
 router.get('/location', async (req, res, next) => {
     const syncDateObj = syncDate();
@@ -63,6 +63,15 @@ router.get('/location/weekly', async (req, res, next) => {
         return res.status(200).json(JSON.parse(value));
     });
 });
+
+router.post('/subscribe', async (req, res, next) => {
+    console.log(req.body);
+    const email = req.body.email;
+    const tags = req.body.tags;
+    await createUser(email,tags);
+    res.status(200).json({});
+});
+
 
 module.exports = router;
 
