@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/DisasterSMS/static/css/main.cfe30e04.chunk.css",
-    "main.js": "/DisasterSMS/static/js/main.c81f5c68.chunk.js",
-    "main.js.map": "/DisasterSMS/static/js/main.c81f5c68.chunk.js.map",
+    "main.css": "/DisasterSMS/static/css/main.ba2922f2.chunk.css",
+    "main.js": "/DisasterSMS/static/js/main.942e1acd.chunk.js",
+    "main.js.map": "/DisasterSMS/static/js/main.942e1acd.chunk.js.map",
     "runtime-main.js": "/DisasterSMS/static/js/runtime-main.601fe063.js",
     "runtime-main.js.map": "/DisasterSMS/static/js/runtime-main.601fe063.js.map",
-    "static/js/2.77bd380b.chunk.js": "/DisasterSMS/static/js/2.77bd380b.chunk.js",
-    "static/js/2.77bd380b.chunk.js.map": "/DisasterSMS/static/js/2.77bd380b.chunk.js.map",
+    "static/css/2.06b08db3.chunk.css": "/DisasterSMS/static/css/2.06b08db3.chunk.css",
+    "static/js/2.2d08d931.chunk.js": "/DisasterSMS/static/js/2.2d08d931.chunk.js",
+    "static/js/2.2d08d931.chunk.js.map": "/DisasterSMS/static/js/2.2d08d931.chunk.js.map",
     "index.html": "/DisasterSMS/index.html",
-    "precache-manifest.c4fc4a9d1047540e0a3fe00777ad286d.js": "/DisasterSMS/precache-manifest.c4fc4a9d1047540e0a3fe00777ad286d.js",
+    "precache-manifest.5a46dfcb4b4248cc9dc2f6c85f3b5ee3.js": "/DisasterSMS/precache-manifest.5a46dfcb4b4248cc9dc2f6c85f3b5ee3.js",
     "service-worker.js": "/DisasterSMS/service-worker.js",
-    "static/css/main.cfe30e04.chunk.css.map": "/DisasterSMS/static/css/main.cfe30e04.chunk.css.map",
-    "static/js/2.77bd380b.chunk.js.LICENSE.txt": "/DisasterSMS/static/js/2.77bd380b.chunk.js.LICENSE.txt"
+    "static/css/2.06b08db3.chunk.css.map": "/DisasterSMS/static/css/2.06b08db3.chunk.css.map",
+    "static/css/main.ba2922f2.chunk.css.map": "/DisasterSMS/static/css/main.ba2922f2.chunk.css.map",
+    "static/js/2.2d08d931.chunk.js.LICENSE.txt": "/DisasterSMS/static/js/2.2d08d931.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.601fe063.js",
-    "static/js/2.77bd380b.chunk.js",
-    "static/css/main.cfe30e04.chunk.css",
-    "static/js/main.c81f5c68.chunk.js"
+    "static/css/2.06b08db3.chunk.css",
+    "static/js/2.2d08d931.chunk.js",
+    "static/css/main.ba2922f2.chunk.css",
+    "static/js/main.942e1acd.chunk.js"
   ]
 }
