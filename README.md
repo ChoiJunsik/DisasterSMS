@@ -22,8 +22,8 @@
     ![구독_오늘의키워드](https://user-images.githubusercontent.com/26922008/91542568-0563a900-e959-11ea-8da8-e2b3626b62cc.PNG)
 
 6. 구독서비스 메일링 : 오류 발견, 배포 미뤄둠
-    ![1](https://user-images.githubusercontent.com/26922008/91650170-36f28680-eab7-11ea-8764-a7ae734e08f0.jpg)
-    ![2](https://user-images.githubusercontent.com/26922008/91650171-378b1d00-eab7-11ea-9cf7-782b123300e6.jpg)
+    ![1](https://user-images.githubusercontent.com/26922008/91650254-242c8180-eab8-11ea-96ca-c846d8103066.jpg)
+    ![2](https://user-images.githubusercontent.com/26922008/91650253-2393eb00-eab8-11ea-8127-adeb49b09d7f.jpg)
 
 **To Do List**
 
