@@ -4,10 +4,9 @@
 
 **완료 상황**
 
-1. 게시판 API 추출 후 이용 => 2020-07-08~08-08 게시판 데이터 JSON DB화
+1. 게시판 API 추출 후 이용 => 2020-07-08~08-08 게시판 데이터 JSON DB화 => 20200830 REDIS , MySQL으로 옮김
 
 2. Front/Backend : 지도-검색 연동 실시간 재난 현황 update
-    ![위험현황](https://user-images.githubusercontent.com/26922008/89745367-5157c680-daee-11ea-8747-ea3a31243fdf.png)
     ![키워드_검색](https://user-images.githubusercontent.com/26922008/89745370-53218a00-daee-11ea-9253-62e02b9bf492.PNG)
 
 3. 지도 : 재난문자 현황에 따른 색 변화
@@ -21,6 +20,10 @@
 5. 2020.08.28 구독 서비스 / 오늘의 키워드
     * 구독자 데이터가 저장된 mysql과 연결
     ![구독_오늘의키워드](https://user-images.githubusercontent.com/26922008/91542568-0563a900-e959-11ea-8da8-e2b3626b62cc.PNG)
+
+6. 구독서비스 메일링 : 오류 발견, 배포 미뤄둠
+    ![1](https://user-images.githubusercontent.com/26922008/91650170-36f28680-eab7-11ea-8764-a7ae734e08f0.jpg)
+    ![2](https://user-images.githubusercontent.com/26922008/91650171-378b1d00-eab7-11ea-9cf7-782b123300e6.jpg)
 
 **To Do List**
 
